@@ -49,6 +49,16 @@ Route::get('/jobs/{id}', function($id) {
           'id' => 3,
           'title' => 'Backend developer',
           'salary' => '$600,000'
+       ],
+       [
+          'id' => 4,
+          'title' => 'teacher',
+          'salary'=> '$30,000'
+       ],
+       [
+         'id' => 5,
+         'title' => 'musician',
+         'salary' => '$90,000'
        ]
        ];
          
@@ -58,6 +68,10 @@ Route::get('/jobs/{id}', function($id) {
        //fn is an anonymous function
        //it takes the $job argument which is the current job and cheks if itd id corresponds to the one passed as a parameter 
        //if it meets the true bool it is is returned by the Arr::first
+       //alternative without the arrow function
+//     $job = Arr::first($jobs, function($job) use ($id) {
+//     return $job['id'] == $id;
+// });
        $job = Arr::first($jobs, fn($job) => $job['id'] == $id);
        
        //dump and die for the found job details
