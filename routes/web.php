@@ -75,8 +75,8 @@ Route::get('/jobs/{id}', function($id) {
        $job = Arr::first($jobs, fn($job) => $job['id'] == $id);
        
        //dump and die for the found job details
-        dd($job);
-    return view('jobs');
+        // dd($job);
+    return view('job', ['job' => $job]);
  });
 
 Route::get('/contact', function() {
