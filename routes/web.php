@@ -7,8 +7,8 @@ use App\Models\Job;
 
 
 
-
 Route::get('/', function () {
+   
     return view('home', );
 });
 
@@ -19,7 +19,13 @@ Route::get('/jobs', function()   {
 });
 
 Route::get('/jobs/{id}', function($id) {
-   
+        /**
+         * This method finds a job with a given id
+         * fn (anonymous function)has been passed as an argument to the Arr::first function
+         * it takes the $job argument which is the current job and cheks if its id corresponds to the one passed as a parameter 
+         * if it meets the true bool it is is returned by the Arr::first
+         * 
+         */
          
        //alternative without the arrow function
 //     $job = Arr::first($jobs, function($job) use ($id) {
