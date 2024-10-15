@@ -52,6 +52,9 @@ class Job{
             abort(404);
 
         }
+        
+        //return the found job
+        return $job;
 
     }
  }
