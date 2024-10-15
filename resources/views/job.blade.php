@@ -3,9 +3,10 @@
 <x-slot name="heading">
     Job   
     </x-slot > 
+    <!-- displays the details of a single job -->
   <h2 class="font-bold text-lg"> {{ $job['title']}}</h2>
 
   <p>
-    This job pays {{$job ['salary']}} per year.
+    This job pays {{$job['salary']}} per year.
   </p>
 </x-layout>
