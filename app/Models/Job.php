@@ -15,5 +15,11 @@ class Job extends Model{
 
   //elements that can be mass assigned
   protected $fillable = ['title', 'salary'];
+
+  //if i want to find more information about the employer of the job
+  public function employer(){
+
+    return $this->belongsTo(Employer::class);
+  }
 }
     
