@@ -8,7 +8,7 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     * //creating a pivot table between jobs and tags and ensures thata if a tag is deleted the corresponsing job tag to it is also deleted
+     * //creating a pivot table between jobs and tags and ensures that if a tag is deleted the corresponsing job tag to it is also deleted
      */
     public function up(): void
     {

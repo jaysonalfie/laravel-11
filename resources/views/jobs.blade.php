@@ -6,17 +6,22 @@
 
 
    
-   <ul>
+   <div class="space-y-4">
 <!-- 
    loops through ech job in the jobs array -->
     @foreach ($jobs as $job )
-    <li>
+   
 
     <!-- each job title is displayed as a clickable link -->
-       <a href="/jobs/{{ $job['id']}}" class="text-blue-500  hover:underline">
-        <strong>{{ $job['title']}}</strong> : Pays {{ $job['salary']}}  per year 
+       <a href="/jobs/{{ $job['id']}}" class="block px-4 py-5 border border-gray-200 rounded-lg ">
+         <div class="font-bold text-blue-500  text-sm">
+            {{ $job->employer->name }}
+         </div>
+       <div>
+       <strong>{{ $job['title']}}</strong> : Pays {{ $job['salary']}}  per year 
+       </div>
           </a>
-    </li>
+   
     @endforeach
-   </ul>
+</div>
 </x-layout>

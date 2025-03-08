@@ -12,6 +12,7 @@ class Employer extends Model
 
     //a employer can create many jobs and not just one hence hasMany
     public function jobs(){
+        
     return $this->hasMany(Job::class);
     }
 }
